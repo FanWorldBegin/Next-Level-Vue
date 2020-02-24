@@ -233,17 +233,17 @@
       "attendees": []
     },
     {
-      "id": 4929641,
+      "id": 6361392,
       "user": {
         "id": "abc123",
         "name": "Adam"
       },
-      "category": "nature",
+      "category": "",
       "organizer": {
         "id": "abc123",
         "name": "Adam"
       },
-      "title": "aaa",
+      "title": "",
       "description": "",
       "location": "",
       "date": "",
@@ -251,21 +251,21 @@
       "attendees": []
     },
     {
-      "id": 8856509,
+      "id": 9662208,
       "user": {
         "id": "abc123",
         "name": "Adam"
       },
-      "category": "animal welfare",
+      "category": "education",
       "organizer": {
         "id": "abc123",
         "name": "Adam"
       },
       "title": "lalal",
-      "description": "",
-      "location": "",
-      "date": "",
-      "time": "",
+      "description": "hihi",
+      "location": "sss",
+      "date": "2020-02-04T11:11:00.000Z",
+      "time": "3:00",
       "attendees": []
     }
   ]

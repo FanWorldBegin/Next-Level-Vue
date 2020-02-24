@@ -6,7 +6,13 @@ import router from './router'
 import store from './store/store'
 import BaseIcon from '@/components/BaseIcon'
 import 'nprogress/nprogress.css'
+import Vuelidate from 'vuelidate'
+import DateFilter from './filters/date'
+
+Vue.use(Vuelidate)
 Vue.component('BaseIcon', BaseIcon)
+Vue.filter('date', DateFilter)
+// can use in every component
 
 Vue.config.productionTip = false
 
@@ -26,6 +32,11 @@ requireComponent.keys().forEach(fileName => {
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
 
+// Vue.mixin({
+//   mounted() {
+//     console.log('I am mixed in to every components.')
+//   }
+// })
 new Vue({
   router,
   store,

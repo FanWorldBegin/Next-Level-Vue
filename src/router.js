@@ -7,6 +7,7 @@ import NProgress from 'nprogress'
 import store from '@/store/store'
 import NotFound from './views/NotFound.vue'
 import NetworkIssue from './views/NetworkIssue.vue'
+import Validation from './views/validation.vue'
 Vue.use(Router)
 
 const router = new Router({
@@ -39,11 +40,11 @@ const router = new Router({
             next()
           })
           // on error redirect to 404 with the name of resource missing
-          .catch( error => {
+          .catch(error => {
             if (error.response && error.response.status == 404) {
               next({ name: '404', params: { resource: 'event' } })
             } else {
-              next({ name: 'network-issue'})
+              next({ name: 'network-issue' })
             }
           })
       }
@@ -65,6 +66,16 @@ const router = new Router({
       path: '/network-issue',
       name: 'network-issue',
       component: NetworkIssue
+    },
+    {
+      path: '/validation',
+      name: 'validation',
+      component: Validation
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: () => import('@/views/filters')
     }
   ]
 })
